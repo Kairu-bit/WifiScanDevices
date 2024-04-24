@@ -1,4 +1,4 @@
-let ifconfig2 = `
+/*let ifconfig2 = `
 lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         inet 127.0.0.1  netmask 255.0.0.0
         inet6 ::1  prefixlen 128  scopeid 0x10<host>
@@ -15,7 +15,7 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         RX packets 10000  bytes 2000000 (1.9 MiB)
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 5000  bytes 1000000 (953.7 KiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0`
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0`*/
 
 // XXX: THIS IS MY METHOD FOR FINDING THE WLAN IPv4 Address. DON'T JUDGE ME, LOL. @KairuDev
 
@@ -29,7 +29,7 @@ export function GetWlanIPv4(){
   catch (error) {
     return false;
   }
-  ifconfig = ifconfig2;
+  //ifconfig = ifconfig2;
   const wlanIndex = ifconfig.indexOf("wlan0");
   if (wlanIndex !== -1){
     ifconfig = ifconfig.slice(wlanIndex, undefined);
